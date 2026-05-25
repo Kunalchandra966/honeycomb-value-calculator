@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honeycomb Calculator</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Honeycomb Calculator</h1>
+
+  <input type="number" id="rate" placeholder="Rate Per Sq Ft">
+
+  <input type="number" id="length" placeholder="Length">
+
+  <input type="number" id="breadth" placeholder="Breadth">
+
+  <select id="unit">
+    <option value="inch">Inch</option>
+    <option value="feet">Feet</option>
+    <option value="cm">CM</option>
+    <option value="mm">MM</option>
+    <option value="meter">Meter</option>
+  </select>
+
+  <input type="number" id="qty" placeholder="Quantity">
+
+  <button onclick="addItem()">Add Item</button>
+
+  <button onclick="clearAll()">Clear All</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Size</th>
+        <th>Qty</th>
+        <th>Area</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+
+    <tbody id="items"></tbody>
+  </table>
+
+  <div class="result">
+    <h2>Total Area: <span id="totalArea">0</span> sq ft</h2>
+    <h2>Total Price: ₹<span id="totalPrice">0</span></h2>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
